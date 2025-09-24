@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Appointments - Smart School Clinic</title>
+  <link rel="stylesheet" href="appointment.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="logo">
+      <!-- Logo placeholder -->
+      <img src="logo.jpeg" alt="Smart School Clinic Logo">
+    </div>
+
+    <!-- Centered links -->
+    <a href="student-dashboard.html">🏠 Back</a>
+    <a href="appointments.html">📅 Appointments</a>
+    <a href="login.html" onclick="localStorage.clear()">Logout</a>
+  </nav>
+  
+
+  <!-- Main container -->
+  <div class="container">
+    <h1>📅 Manage Appointments</h1>
+
+    <!-- Appointment Form -->
+    <form id="appointmentForm">
+      <div class="form-group">
+        <label for="studentName">Student Name</label>
+        <input type="text" id="studentName" name="studentName" required>
+      </div>
+
+      <div class="form-group">
+        <label for="reason">Reason</label>
+        <input type="text" id="reason" name="reason" required>
+      </div>
+
+      <div class="form-group">
+        <label for="date">Date</label>
+        <input type="date" id="date" name="date" required>
+      </div>
+
+      <div class="form-group">
+        <label for="time">Time</label>
+        <input type="time" id="time" name="time" required>
+      </div>
+
+      <button type="submit">Add Appointment</button>
+    </form>
+
+    <!-- Appointments Table -->
+    <h2>All Appointments</h2>
+    <table>
+      <thead>
+        <tr>
+           <th>Student</th>
+      <th>Reason</th>
+      <th>Date</th>
+      <th>Time</th>
+      <th>Status</th>
+      <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody id="appointmentsTable"></tbody>
+    </table>
+  </div>
+
+  <script src="appointment.js"></script>
+</body>
+</html>
