@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Dashboard - Smart School Clinic</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="student-dashboard.css">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  
+</head>
+
+<body>
+  <div id="wrapper">
+    <!-- Sidebar -->
+    <div id="sidebar">
+      <div class="sidebar-brand">
+        <i class="fas fa-hospital-alt"></i> <span>School Clinic</span>
+      </div>
+
+      <div class="user-profile">
+      
+        <div class="user-role"><small>Student</small></div>
+      </div>
+
+      <div class="sidebar-divider"></div>
+
+      <!-- Menu -->
+      <div class="sidebar-item" onclick="navigateTo('certificates.html')"><i class="fas fa-certificate"></i><span>Certificates</span></div>
+      <div class="sidebar-item" onclick="navigateTo('appointments.html')"><i class="fas fa-calendar-check"></i><span>Appointments</span></div>
+
+      <div class="sidebar-divider"></div>
+      <div class="sidebar-item" onclick="navigateTo('settings-student.html')"><i class="fas fa-cog"></i><span>Settings</span></div>
+      <div class="sidebar-item" onclick="logoutUser('index.html')"><i class="fas fa-sign-out-alt"></i><span>Logout</span></div>
+    </div>
+
+    <!-- Content Wrapper -->
+    <div id="content-wrapper">
+      <!-- Topbar -->
+      <nav id="topbar" class="mb-4">
+        <button id="sidebarToggle" class="btn btn-link d-md-none" aria-label="Toggle sidebar"><i class="fas fa-bars"></i></button>
+        <form class="d-none d-sm-inline-block form-inline ms-auto me-3 my-2 my-md-0 mw-100 navbar-search">
+          <div class="input-group">
+            
+        </form>
+      </nav>
+
+      <!-- Dashboard Content -->
+      <div id="page-content" class="container-fluid">
+        <h1 class="h3 mb-4 text-dark">Dashboard</h1>
+
+        <!-- Announcements -->
+        <div class="card shadow mb-4">
+          <div class="card-header py-3"><h6 class="m-0 font-weight-bold text-white">Announcements</h6></div>
+          <div class="card-body" id="announcementsContainer">Loading announcements...</div>
+        </div>
+
+        <!-- Notifications -->
+        <div class="card shadow mb-4">
+          <div class="card-header py-3"><h6 class="m-0 font-weight-bold text-white">Status</h6></div>
+          <div class="card-body" id="notificationsContainer">Loading status...</div>
+        </div>
+
+        <!-- Certificates -->
+        <div class="card shadow mb-4">
+          <div class="card-header py-3 d-flex justify-content-between align-items-center">
+            <h6 class="m-0 font-weight-bold text-white">Certificates</h6>
+            <button class="btn btn-sm btn-danger" onclick="printCertificates()" aria-label="Print Certificates">
+              <i class="fas fa-file-pdf"></i> Print PDF
+            </button>
+          </div>
+          <div class="card-body" id="certificatesContainer">Loading certificates...</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="student-dashboard.js"></script>
+</body>
+</html>

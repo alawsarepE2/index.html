@@ -1,0 +1,99 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Navbar */
+.navbar {
+  background: #2e7d32;
+  color: white;
+  padding: 15px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar h2 {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.navbar nav a {
+  color: white;
+  margin-left: 15px;
+  text-decoration: none;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+.navbar nav a:hover,
+.navbar nav a.active {
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+/* Container */
+.container {
+  max-width: 800px;
+  margin: 30px auto;
+  background: #f5fff5;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h1, h2 {
+  color: #1b5e20;
+  margin-bottom: 15px;
+}
+
+p {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Settings Sections */
+.settings-section {
+  margin-bottom: 30px;
+  padding: 20px;
+  background: #e8f5e9;
+  border-left: 5px solid #388e3c;
+  border-radius: 8px;
+}
+
+.settings-section h2 {
+  margin-bottom: 15px;
+}
+
+.settings-section label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #1b5e20;
+}
+
+.settings-section input,
+.settings-section select {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 15px;
+  border: 1px solid #a5d6a7;
+  border-radius: 5px;
+}
+
+.settings-section button {
+  padding: 10px 15px;
+  background: #388e3c;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.settings-section button:hover {
+  background: #2e7d32;
+}
